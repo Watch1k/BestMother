@@ -1,0 +1,959 @@
+extend includes/_layout
+block title
+	title Index
+block content
+	//begin wrapper
+	.wrapper
+		//begin section
+		.section
+			//begin aside
+			aside.aside
+				//begin logo
+				.logo
+					a.logo__link(href='index.html')
+						img.logo__img(src='img/logo.png')
+				//end logo
+
+				//begin login
+				.login
+					form.login__form.form(action='#')
+						.form__field
+							input.form__input(type='text' placeholder='Введите ваш логин' data-validation="required")
+						.form__field
+							input.form__input.form__input_password.js-pass(type='password' placeholder='Пароль' data-validation="required")
+							.form__eye.js-show-pass
+								.icon.icon-eye
+						.form__field
+							button.form__button.icon-login(type='submit')
+						.form__field.form__field_btn
+							button.form__button.icon-reg(type='button')
+						.form__field.form__field_forgot
+							a.form__forgot(href='#') напомнить пароль?
+					//begin socials
+					.login__socials.socials
+						a.socials__link.icon-vk(href='#')
+						a.socials__link.icon-fb(href='#')
+						a.socials__link.icon-tw(href='#')
+						a.socials__link.icon-od(href='#')
+					//end socials
+				//end login
+			//end aside
+
+			//begin aside
+			aside.aside
+				//begin header
+				nav.nav
+					a.nav__link.nav__link_forum(href='#')
+						.nav__link-icon.icon-forum
+						.nav__link-text Форум
+					a.nav__link.nav__link_name(href='#')
+						.nav__link-icon.icon-name
+						.nav__link-text Выбор имени
+					a.nav__link.nav__link_heart(href='#')
+						.nav__link-icon.icon-heart
+						.nav__link-text Красота <br>и здоровье
+					a.nav__link.nav__link_cake(href='#')
+						.nav__link-icon.icon-cake
+						.nav__link-text Рецепты
+					a.nav__link.nav__link_subscribe(href='#')
+						.nav__link-icon.icon-subscribe
+						.nav__link-text Подписаться
+					a.nav__link.nav__link_search(href='#')
+						.nav__link-icon.icon-search
+						.nav__link-text Поиск
+				//end header
+
+				//begin navigation
+				.navigation.js-navigation
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-1
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-1
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-2
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-2
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-3
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-3
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-4
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-4
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+				//end navigation
+
+				.teaser
+					.teaser__inner
+						.teaser__title Лучшим мамам, <br>только лучшее
+						.teaser__quote.icon-quote
+							.teaser__quote-text Посмотрите, <br>что новенького
+			//end aside
+		//end section
+
+		//begin main
+		main.main
+			//begin tabs
+			.tabs.js-tabs-nav
+				.tabs__item.is-active
+					.tabs__item-text.icon-tabs-1
+					.tabs__item-text.icon-tabs-1-hover
+				.tabs__item
+					.tabs__item-text.icon-tabs-2
+					.tabs__item-text.icon-tabs-2-hover
+				.tabs__item
+					.tabs__item-text.icon-tabs-3
+					.tabs__item-text.icon-tabs-3-hover
+				.tabs__item
+					.tabs__item-text.icon-tabs-4
+					.tabs__item-text.icon-tabs-4-hover
+			//end tabs
+
+			//begin tab
+			.tab.js-tabs-for
+				.tab__item.is-active
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-1.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-2.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Время мишек: защищаем ребенка
+								.card__text Чем занять компанию ребят на детском празднике?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-3.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-4.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Пицца с тунцом
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__multi
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-5.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-6.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Время мишек: защищаем ребенка
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-7.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-8.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-9.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-10.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+					.tab__content
+						.card.card_multi
+							a(href='#')
+								img.card__multi(src='img/content/advert-1.png' alt='image')
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-1.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-2.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-3.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-4.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						.card.card_multi
+							a(href='#')
+								img.card__multi(src='img/content/advert-2.png' alt='image')
+					.tab__multi
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-5.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-6.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-7.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-8.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-9.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-10.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+
+				.tab__item
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-1.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-2.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Время мишек: защищаем ребенка
+								.card__text Чем занять компанию ребят на детском празднике?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-3.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-4.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Пицца с тунцом
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__multi
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-5.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-6.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Время мишек: защищаем ребенка
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-7.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-8.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-9.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+						.tab__content
+							//begin card
+							a.card(href='#')
+								.card__image
+									img.card__img(src='img/content/card-10.png' alt='image')
+								.card__content
+									.card__title
+										.card__title-in Двойняшки, что с ними делать?
+									.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+									.card__controls
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-comment
+											.card__icon.icon-card-comment-hover
+											.card__icon-text 115
+										button.card__controls-item(type='button')
+											.card__icon.icon-card-heart
+											.card__icon.icon-card-heart-hover
+											.card__icon-text 26
+							//end card
+					.tab__content
+						.card.card_multi
+							a(href='#')
+								img.card__multi(src='img/content/advert-1.png' alt='image')
+				.tab__item
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-1.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-2.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Время мишек: защищаем ребенка
+								.card__text Чем занять компанию ребят на детском празднике?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-3.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-4.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Пицца с тунцом
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+				.tab__item
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-1.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Двойняшки, что с ними делать?
+								.card__text Чем занять компанию ребят?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-2.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Время мишек: защищаем ребенка
+								.card__text Чем занять компанию ребят на детском празднике?
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+					.tab__content
+						//begin card
+						a.card(href='#')
+							.card__image
+								img.card__img(src='img/content/card-3.png' alt='image')
+							.card__content
+								.card__title
+									.card__title-in Все об углеводах: 11 вопросов и не меньше ответов
+								.card__text Чем занять компанию ребят на детском празднике? Представляем обзор настольных игр способных увлечь любого ребенка.
+								.card__controls
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-comment
+										.card__icon.icon-card-comment-hover
+										.card__icon-text 115
+									button.card__controls-item(type='button')
+										.card__icon.icon-card-heart
+										.card__icon.icon-card-heart-hover
+										.card__icon-text 26
+						//end card
+			//end tab
+		//end main
+	//end wrapper
