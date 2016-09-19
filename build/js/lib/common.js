@@ -67,4 +67,11 @@ $(document).ready(function(){
 		});
 	})();
 
+	(function () {
+		var error = $('.js-hide-error');
+
+		error.on('click', function () {
+			$(this).fadeOut();
+		});
+	})();
 });

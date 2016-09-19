@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Index</title>
+  <title>Logined</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <!-- theme color for android 5.0 -->
@@ -27,46 +27,57 @@
         </div>
         <!--end logo-->
         <!--begin login-->
-        <div class="login">
-          <form class="login__form form" action="#">
-            <div class="form__field">
-              <input class="form__input" type="text" placeholder="Введите ваш логин" data-validation="required">
-            </div>
-            <div class="form__field">
-              <input class="form__input form__input_password js-pass" type="password" placeholder="Пароль" data-validation="required">
-              <div class="form__error icon-error-password js-hide-error"></div>
-              <div class="form__eye js-show-pass">
-                <div class="icon icon-eye"></div>
-              </div>
-            </div>
-            <div class="form__field">
-              <button class="form__button icon-login" type="submit"></button>
-            </div>
-            <div class="form__field form__field_btn">
-              <button class="form__button icon-reg" type="button"></button>
-            </div>
-            <div class="form__field form__field_forgot"><a class="form__forgot" href="#">напомнить пароль?</a></div>
-          </form>
-          <!--begin socials-->
-          <div class="login__socials socials">
-            <a class="socials__link" href="#">
-              <div class="socials__icon icon-vk"></div>
-              <div class="socials__icon icon-vk-hover"></div>
+        <div class="login login_active">
+          <!--begin settings-->
+          <div class="login__settings settings">
+            <!--remove is-man if WOMAN-->
+            <a class="settings__link is-man" href="#">
+              <!--woman-->
+              <div class="settings__icon icon-settings-1"></div>
+              <div class="settings__icon icon-settings-1-hover"></div>
+              <!--man-->
+              <div class="settings__icon icon-settings-01"></div>
+              <div class="settings__icon icon-settings-01-hover"></div>
+              <div class="settings__text">Моя страница</div>
             </a>
-            <a class="socials__link" href="#">
-              <div class="socials__icon icon-fb"></div>
-              <div class="socials__icon icon-fb-hover"></div>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-2"></div>
+              <div class="settings__icon icon-settings-2-hover"></div>
+              <div class="settings__text">Мои сообщения</div>
+              <div class="settings__notification">1</div>
             </a>
-            <a class="socials__link" href="#">
-              <div class="socials__icon icon-tw"></div>
-              <div class="socials__icon icon-tw-hover"></div>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-3"></div>
+              <div class="settings__icon icon-settings-3-hover"></div>
+              <div class="settings__text">Мой дневник</div>
             </a>
-            <a class="socials__link" href="#">
-              <div class="socials__icon icon-od"></div>
-              <div class="socials__icon icon-od-hover"></div>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-4"></div>
+              <div class="settings__icon icon-settings-4-hover"></div>
+              <div class="settings__text">Мои друзья</div>
+            </a>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-5"></div>
+              <div class="settings__icon icon-settings-5-hover"></div>
+              <div class="settings__text">Мои фотографии</div>
+            </a>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-6"></div>
+              <div class="settings__icon icon-settings-6-hover"></div>
+              <div class="settings__text">Рецепты</div>
+            </a>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-7"></div>
+              <div class="settings__icon icon-settings-7-hover"></div>
+              <div class="settings__text">Статьи</div>
+            </a>
+            <a class="settings__link" href="#">
+              <div class="settings__icon icon-settings-8"></div>
+              <div class="settings__icon icon-settings-8-hover"></div>
+              <div class="settings__text">Настройки</div>
             </a>
           </div>
-          <!--end socials-->
+          <!--end settings-->
         </div>
         <!--end login-->
       </aside>

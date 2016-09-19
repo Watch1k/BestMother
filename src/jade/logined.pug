@@ -1,6 +1,6 @@
 extend includes/_layout
 block title
-	title Index
+	title Logined
 block content
 	//begin wrapper
 	.wrapper
@@ -15,36 +15,48 @@ block content
 				//end logo
 
 				//begin login
-				.login
-					form.login__form.form(action='#')
-						.form__field
-							input.form__input(type='text' placeholder='Введите ваш логин' data-validation="required")
-						.form__field
-							input.form__input.form__input_password.js-pass(type='password' placeholder='Пароль' data-validation="required")
-							.form__error.icon-error-password.js-hide-error
-							.form__eye.js-show-pass
-								.icon.icon-eye
-						.form__field
-							button.form__button.icon-login(type='submit')
-						.form__field.form__field_btn
-							button.form__button.icon-reg(type='button')
-						.form__field.form__field_forgot
-							a.form__forgot(href='#') напомнить пароль?
-					//begin socials
-					.login__socials.socials
-						a.socials__link(href='#')
-							.socials__icon.icon-vk
-							.socials__icon.icon-vk-hover
-						a.socials__link(href='#')
-							.socials__icon.icon-fb
-							.socials__icon.icon-fb-hover
-						a.socials__link(href='#')
-							.socials__icon.icon-tw
-							.socials__icon.icon-tw-hover
-						a.socials__link(href='#')
-							.socials__icon.icon-od
-							.socials__icon.icon-od-hover
-					//end socials
+				.login.login_active
+					//begin settings
+					.login__settings.settings
+						//remove is-man if WOMAN
+						a.settings__link.is-man(href='#')
+							//woman
+							.settings__icon.icon-settings-1
+							.settings__icon.icon-settings-1-hover
+							//man
+							.settings__icon.icon-settings-01
+							.settings__icon.icon-settings-01-hover
+							.settings__text Моя страница
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-2
+							.settings__icon.icon-settings-2-hover
+							.settings__text Мои сообщения
+							.settings__notification 1
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-3
+							.settings__icon.icon-settings-3-hover
+							.settings__text Мой дневник
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-4
+							.settings__icon.icon-settings-4-hover
+							.settings__text Мои друзья
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-5
+							.settings__icon.icon-settings-5-hover
+							.settings__text Мои фотографии
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-6
+							.settings__icon.icon-settings-6-hover
+							.settings__text Рецепты
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-7
+							.settings__icon.icon-settings-7-hover
+							.settings__text Статьи
+						a.settings__link(href='#')
+							.settings__icon.icon-settings-8
+							.settings__icon.icon-settings-8-hover
+							.settings__text Настройки
+					//end settings
 				//end login
 			//end aside
 
