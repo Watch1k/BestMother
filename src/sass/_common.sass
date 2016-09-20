@@ -118,6 +118,20 @@ img
 // 		color: #fff
 // 		background-color: $red
 
+.btn
+	text-align: center
+	&_green
+		height: 32px
+		padding-top: 4px
+		+candara-b
+		font-size: 17px
+		color: #ffffff
+		line-height: 1.2
+		border-radius: 16px
+		background-color: #578924
+		background-image: linear-gradient(to top, #4a761e 0%, #a8d046 100%)
+		box-shadow: inset 0 -1px 5px rgba(186, 229, 82, 0.75), 0 3px 4px rgba(60, 88, 22, 0.78)
+		-webkit-font-smoothing: antialiased
 
 
 /* ===================================
@@ -203,7 +217,7 @@ img
 		padding: 25px 10px 25px 25px
 	&__form
 		margin: 0 auto
-		padding: 60px 20px 0
+		padding: 60px 25px 0
 		width: 209px
 		height: 334px
 		background: url(../img/form.png) center center no-repeat
@@ -240,17 +254,21 @@ img
 			top: -3px
 		&:nth-child(3)
 			opacity: 0
-	&__link:hover &__icon
+	&__link:hover &__icon,
+	&__link.is-active &__icon
 		opacity: 0
-	&__link:hover &__icon:nth-child(2)
+	&__link:hover &__icon:nth-child(2),
+	&__link.is-active &__icon:nth-child(2)
 		opacity: 1
 	&__link.is-man &__icon
 		opacity: 0
 	&__link.is-man &__icon:nth-child(3)
 		opacity: 1
-	&__link.is-man:hover &__icon:nth-child(3)
+	&__link.is-man:hover &__icon:nth-child(3),
+	&__link.is-man.is-active &__icon:nth-child(3)
 		opacity: 0
-	&__link.is-man:hover &__icon:nth-child(4)
+	&__link.is-man:hover &__icon:nth-child(4),
+	&__link.is-man.is-active &__icon:nth-child(4)
 		opacity: 1
 	&__text
 		display: inline-block
@@ -284,15 +302,20 @@ img
 		& + &
 			margin-top: 14px
 			&_btn
-				margin-top: 4px
-			&_forgot
 				margin-top: 10px
 	&__error
 		position: absolute
+		padding-top: 6px
 		z-index: 1
 		bottom: 100%
-		left: -1px
+		left: -7px
 		display: none
+		+candara-b
+		font-size: 16px
+		color: #ffffff
+		line-height: 1.44
+		text-align: center
+		-webkit-font-smoothing: antialiased
 	&__input.error + &__error
 		display: block
 	&__input
@@ -494,16 +517,15 @@ img
 		+r(479)
 			height: 40px
 		&-text
-			margin-top: 7px
+			margin-top: 4px
 			display: inline-block
 			vertical-align: middle
-			+r(1023)
-				margin-top: 4px
-				+candara-b
-				font-size: 20px
-				color: #ffffff
-				line-height: 1.15
-				background-image: none
+			+candara-b
+			font-size: 20px
+			color: #ffffff
+			line-height: 1.15
+			text-shadow: 0 2px 2px rgba(68, 35, 34, 0.17)
+			-webkit-font-smoothing: antialiased
 			+r(767)
 				width: auto
 				font-size: 16px
@@ -511,7 +533,7 @@ img
 				+candara
 				font-size: 14px
 			+r(419)
-				margin-top: 8px
+				margin-top: 2px
 				font-size: 12px
 	&__item:nth-child(1) &__link,
 	&__item:nth-child(1) .navigate__inner
@@ -558,6 +580,12 @@ img
 		width: 50%
 	&__title
 		margin-bottom: 20px
+		+candara-b
+		font-size: 20px
+		color: #ffffff
+		text-transform: uppercase
+		text-shadow: 0 2px 2px rgba(68, 35, 34, 0.17)
+		-webkit-font-smoothing: antialiased
 	&__row
 		display: block
 		+pie-clearfix
@@ -575,12 +603,15 @@ img
 		text-shadow: 0 2px 2px rgba(178, 161, 161, 0.17)
 		font-size: 18px
 		border-bottom: 1px solid #afdde3
+		-webkit-font-smoothing: antialiased
 	&__goto
 		display: block
 		position: absolute
+		padding-top: 8px
 		z-index: 1
 		bottom: 15px
 		left: 20px
+		width: 185px
 	&__preview
 		display: block
 		font-size: 0
@@ -591,6 +622,7 @@ img
 		border-radius: 5px
 		box-shadow: inset 0 -1px 1px #6a9ea6, 0 9px 13px rgba(128, 177, 185, 0.4)
 		background-color: #ffffff
+		-webkit-font-smoothing: antialiased
 		+pie-clearfix
 		& + &
 			margin-top: 15px
@@ -765,6 +797,7 @@ img
 		display: table
 		width: 100%
 	&__item
+		position: relative
 		user-select: none
 		display: inline-block
 		width: 25%
@@ -791,34 +824,45 @@ img
 				+border
 				background-color: #ffffff
 		&-text
+			position: relative
+			z-index: 2
 			margin-top: -1px
 			display: inline-block
 			vertical-align: middle
+			font-size: 20px
+			color: #6bb61c
+			line-height: 1.15
+			text-align: center
+			text-shadow: 0 2px 2px rgba(71, 108, 2, 0.17)
+			border-bottom: 1px solid #cedcc0
 			+r(1023)
 				display: block
 				width: 100%
 				height: 100%
+				color: #bbbbbb
 				background: none
-				font-size: 20px
-				color: #bbb
-				line-height: 1.15
-				text-align: center
-				text-shadow: 0 2px 2px rgba(71, 108, 2, 0.17)
+				border: none
 			+r(767)
 				font-size: 16px
 			& + &
 				display: none
+				position: absolute
+				left: 0
+				right: 0
+				margin-left: auto
+				margin-right: auto
+				top: 16px
+				z-index: 1
 		&.is-active &-text
-			display: none
+			color: #ffffff
+			border-bottom: none
 			+r(1023)
 				display: block
 				color: #6bb61c
 			+r(767)
 				border: none
 		&.is-active &-text + &-text
-			position: relative
-			top: 13px
-			display: inline-block
+			display: block
 			+r(1023)
 				display: none
 		

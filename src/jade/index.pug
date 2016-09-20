@@ -21,14 +21,14 @@ block content
 							input.form__input(type='text' placeholder='Введите ваш логин' data-validation="required")
 						.form__field
 							input.form__input.form__input_password.js-pass(type='password' placeholder='Пароль' data-validation="required")
-							.form__error.icon-error-password.js-hide-error
+							.form__error.icon-error-password.js-hide-error Ошибка в пароле
 							.form__eye.js-show-pass
 								.icon.icon-eye
 						.form__field
-							button.form__button.icon-login(type='submit')
+							button.form__button.btn.btn_green(type='submit') Войти
 						.form__field.form__field_btn
-							button.form__button.icon-reg(type='button')
-						.form__field.form__field_forgot
+							button.form__button.btn.btn_green(type='button') Регистрация
+						.form__field
 							a.form__forgot(href='#') напомнить пароль?
 					//begin socials
 					.login__socials.socials
@@ -109,12 +109,12 @@ block content
 				.navigation.js-navigation
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-1 Подготовка
+							.navigation__link-text Подготовка
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-1
 								.navigate__col
-									.navigate__title.icon-navigate-title
+									.navigate__title Главные темы
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 1 триместр (1-10 недель)
@@ -124,7 +124,7 @@ block content
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 3 триместр ( 27-40 недель)
-									a.navigate__goto.icon-goto(href='#')
+									a.navigate__goto.btn.btn_green(href='#') Перейти в раздел
 								.navigate__col
 									a.navigate__preview(href='#')
 										.navigate__preview-image
@@ -143,12 +143,12 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-2 Беременность
+							.navigation__link-text Беременность
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-2
 								.navigate__col
-									.navigate__title.icon-navigate-title
+									.navigate__title Главные темы
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 1 триместр (1-10 недель)
@@ -158,7 +158,7 @@ block content
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 3 триместр ( 27-40 недель)
-									a.navigate__goto.icon-goto(href='#')
+									a.navigate__goto.btn.btn_green(href='#') Перейти в раздел
 								.navigate__col
 									a.navigate__preview(href='#')
 										.navigate__preview-image
@@ -177,12 +177,12 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-3 Роды
+							.navigation__link-text Роды
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-3
 								.navigate__col
-									.navigate__title.icon-navigate-title
+									.navigate__title Главные темы
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 1 триместр (1-10 недель)
@@ -192,7 +192,7 @@ block content
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 3 триместр ( 27-40 недель)
-									a.navigate__goto.icon-goto(href='#')
+									a.navigate__goto.btn.btn_green(href='#') Перейти в раздел
 								.navigate__col
 									a.navigate__preview(href='#')
 										.navigate__preview-image
@@ -211,12 +211,12 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-4 Ребенок
+							.navigation__link-text Ребенок
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-4
 								.navigate__col
-									.navigate__title.icon-navigate-title
+									.navigate__title Главные темы
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 1 триместр (1-10 недель)
@@ -226,7 +226,7 @@ block content
 									a.navigate__row(href='#')
 										.navigate__icon.icon-navigate-icon
 										.navigate__text 3 триместр ( 27-40 недель)
-									a.navigate__goto.icon-goto(href='#')
+									a.navigate__goto.btn.btn_green(href='#') Перейти в раздел
 								.navigate__col
 									a.navigate__preview(href='#')
 										.navigate__preview-image
@@ -258,17 +258,17 @@ block content
 			//begin tabs
 			.tabs.js-tabs-nav
 				.tabs__item.is-active
-					.tabs__item-text.icon-tabs-1 Новые статьи
-					.tabs__item-text.icon-tabs-1-hover
+					.tabs__item-text Новые статьи
+					.tabs__item-text.icon-tabs-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-2 Самое интересное
-					.tabs__item-text.icon-tabs-2-hover
+					.tabs__item-text Самое интересное
+					.tabs__item-text.icon-tabs-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-3 Новые темы
-					.tabs__item-text.icon-tabs-3-hover
+					.tabs__item-text Новые темы
+					.tabs__item-text.icon-tabs-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-4 Новое в блогах
-					.tabs__item-text.icon-tabs-4-hover
+					.tabs__item-text Новое в блогах
+					.tabs__item-text.icon-tabs-hover
 			//end tabs
 
 			//begin tab
