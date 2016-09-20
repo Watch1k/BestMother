@@ -1,0 +1,216 @@
+extend includes/_layout
+block title
+	title Search
+block content
+	//begin wrapper
+	.wrapper
+		//begin section
+		.section
+			//begin aside
+			aside.aside
+				//begin logo
+				.logo
+					a.logo__link(href='index.html')
+						img.logo__img(src='img/logo.png')
+				//end logo
+
+				//begin login
+				.login
+					form.login__form.form(action='#')
+						.form__field
+							input.form__input(type='text' placeholder='Введите ваш логин' data-validation="required")
+						.form__field
+							input.form__input.form__input_password.js-pass(type='password' placeholder='Пароль' data-validation="required")
+							.form__error.icon-error-password.js-hide-error
+							.form__eye.js-show-pass
+								.icon.icon-eye
+						.form__field
+							button.form__button.icon-login(type='submit')
+						.form__field.form__field_btn
+							button.form__button.icon-reg(type='button')
+						.form__field.form__field_forgot
+							a.form__forgot(href='#') напомнить пароль?
+					//begin socials
+					.login__socials.socials
+						a.socials__link(href='#')
+							.socials__icon.icon-vk
+							.socials__icon.icon-vk-hover
+						a.socials__link(href='#')
+							.socials__icon.icon-fb
+							.socials__icon.icon-fb-hover
+						a.socials__link(href='#')
+							.socials__icon.icon-tw
+							.socials__icon.icon-tw-hover
+						a.socials__link(href='#')
+							.socials__icon.icon-od
+							.socials__icon.icon-od-hover
+					//end socials
+				//end login
+			//end aside
+
+			//begin aside
+			aside.aside
+				//begin header
+				nav.nav
+					a.nav__link.nav__link_forum(href='#')
+						.nav__link-icon.icon-forum
+						.nav__link-text Форум
+					a.nav__link.nav__link_name(href='#')
+						.nav__link-icon.icon-name
+						.nav__link-text Выбор имени
+					a.nav__link.nav__link_heart(href='#')
+						.nav__link-icon.icon-heart
+						.nav__link-text Красота <br>и здоровье
+					a.nav__link.nav__link_cake(href='#')
+						.nav__link-icon.icon-cake
+						.nav__link-text Рецепты
+					a.nav__link.nav__link_subscribe(href='#')
+						.nav__link-icon.icon-subscribe
+						.nav__link-text Подписаться
+					a.nav__link.nav__link_search(href='#')
+						.nav__link-icon.icon-search
+						.nav__link-text Поиск
+				//end header
+
+				//begin navigation
+				.navigation.js-navigation
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-1
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-1
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-2
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-2
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-3
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-3
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+					.navigation__item
+						a.navigation__link(href='#')
+							.navigation__link-text.icon-navigation-4
+						.navigation__navigate.navigate.js-navigate
+							.navigate__inner
+								.navigate__subicon.icon-navigation-icon-4
+								.navigate__col
+									.navigate__title.icon-navigate-title
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 1 триместр (1-10 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 2 триместр ( 11-26 недель)
+									a.navigate__row(href='#')
+										.navigate__icon.icon-navigate-icon
+										.navigate__text 3 триместр ( 27-40 недель)
+									a.navigate__goto.icon-goto(href='#')
+								.navigate__col
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-1.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Тест на беременность днем
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-2.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Благоприятные дни для зачатия
+									a.navigate__preview(href='#')
+										.navigate__preview-image
+											img.navigate__preview-img(src='img/content/preview-3.jpg' alt='image')
+										.navigate__preview-content
+											.navigate__preview-text Двойняшки, что с ними делать?
+				//end navigation
+			//end aside
+		//end section
+	//end wrapper

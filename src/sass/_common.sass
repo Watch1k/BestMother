@@ -127,12 +127,30 @@ img
 	+pie-clearfix
 	
 .aside
+	position: relative
 	float: left
 	width: 226px
+	+pie-clearfix
+	+r(1023)
+		width: 100px
 	& + &
 		float: none
 		margin-left: 226px
 		width: auto
+		+r(1023)
+			margin-left: 100px
+	&__hamburger
+		display: none
+		float: right
+		height: 80px
+		+border
+		+pie-clearfix
+		+r(1023)
+			display: block
+		+r(767)
+			float: none
+			background-color: #e67c78
+			background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	
 .logo
 	height: 226px
@@ -140,10 +158,28 @@ img
 	background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	+border
 	+vertical
+	+r(1023)
+		height: 80px
+		display: block
+		&:before
+			display: none
+			content: none
+	+r(767)
+		position: relative
+		width: 160px
+		z-index: 1
 	&__link
 		margin-top: -20px
 		display: inline-block
 		vertical-align: middle
+		+r(1023)
+			display: block
+			margin-top: 0
+			height: 100%
+			padding: 10px
+	&__img
+		+r(1023)
+			height: 100%
 		
 .login
 	padding-top: 12px
@@ -153,6 +189,15 @@ img
 	background-color: #5d3b80
 	background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	+border
+	+r(1023)
+		display: none
+		position: absolute
+		top: 130px
+		left: 0
+		width: 100vw
+		z-index: 3
+	+r(767)
+		top: 362px
 	&_active
 		height: auto
 		padding: 25px 10px 25px 25px
@@ -166,6 +211,10 @@ img
 	&__socials
 		margin-left: 30px
 		margin-top: -75px
+		+r(1023)
+			margin-left: auto
+			margin-right: auto
+			width: 169px
 		
 .settings
 	font-size: 0
@@ -210,6 +259,8 @@ img
 		line-height: 34px
 		vertical-align: middle
 	&__notification
+		position: relative
+		top: -1px
 		display: inline-block
 		margin-left: 10px
 		width: 16px
@@ -328,6 +379,17 @@ img
 	background-color: #e67c78
 	background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	+border
+	+r(1023)
+		display: none
+		position: absolute
+		top: 80px
+		left: -100px
+		right: 0
+		height: 50px
+		z-index: 2
+		text-align: center
+	+r(767)
+		border: none
 	&__link
 		position: relative
 		top: -28px
@@ -336,15 +398,28 @@ img
 		font-size: 0
 		text-align: center
 		+vertical
+		+r(1023)
+			top: 0
+			padding: 10px
+			display: inline-block
+		+r(767)
+			display: block
+			+border
+			background-color: #5d3b80
+			background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 		&_heart
 			position: relative
 			top: -42px
+			+r(1023)
+				top: 0
 		&-icon
 			position: relative
 			display: inline-block
 			vertical-align: bottom
 			animation: anim-nav 0.5s forwards ease-in-out
 			transition: all 0.3s
+			+r(1023)
+				display: none
 		&_heart &-icon
 			position: relative
 			top: 14px
@@ -352,11 +427,19 @@ img
 			font-size: 14px
 			color: #4c8313
 			line-height: 1
+			+r(1023)
+				font-size: 18px
+				line-height: 1.4
+			br
+				+r(1023)
+					display: none
 		&:hover &-icon
 			animation: anim-nav-hover 1s forwards ease-in-out
 			transition: all 1s
 	&__link:nth-child(1) &__link-text
 		margin-top: -5px
+		+r(1023)
+			margin-top: 0
 		
 @keyframes anim-nav
 	0%
@@ -386,18 +469,50 @@ img
 	background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	+border
 	+pie-clearfix
+	+r(1023)
+		padding: 10px 5px
+		height: 80px
+	+r(767)
+		margin-left: -100px
+	+r(479)
+		height: 65px
+		padding: 10px 0
 	&__item
 		flex: 1
 		padding: 0 5px
+		+r(479)
+			padding: 0 2px
+			max-width: 25%
+			white-space: nowrap
 	&__link
 		display: block
 		height: 75px
 		border-radius: 5px
 		+vertical
+		+r(1023)
+			height: 55px
+		+r(479)
+			height: 40px
 		&-text
 			margin-top: 7px
 			display: inline-block
 			vertical-align: middle
+			+r(1023)
+				margin-top: 4px
+				+candara-b
+				font-size: 20px
+				color: #ffffff
+				line-height: 1.15
+				background-image: none
+			+r(767)
+				width: auto
+				font-size: 16px
+			+r(479)
+				+candara
+				font-size: 14px
+			+r(419)
+				margin-top: 8px
+				font-size: 12px
 	&__item:nth-child(1) &__link,
 	&__item:nth-child(1) .navigate__inner
 		background-color: #f8adad
@@ -503,27 +618,137 @@ img
 		left: 0
 		z-index: 2
 		
+.hamburger
+	pointer-events: auto
+	-webkit-tap-highlight-color: transparent
+	display: none
+	margin: 0
+	padding: 31px 10px
+	z-index: 10
+	cursor: pointer
+	transition-property: opacity, -webkit-filter
+	transition-property: opacity, filter
+	transition-property: opacity, filter, -webkit-filter
+	transition-duration: 0.15s
+	transition-timing-function: linear
+	font: inherit
+	color: inherit
+	text-transform: none
+	background-color: transparent
+	border: 0
+	overflow: visible
+	+r(1023)
+		display: block
+	+r(767)
+		float: right
+	&__box
+		width: 23px
+		height: 16px
+		display: block
+		position: relative
+	&__inner
+		display: block
+		top: 50%
+		margin-top: -1px
+		width: 23px
+		height: 2px
+		background-color: #3263a5
+		position: absolute
+		transition-property: -webkit-transform
+		transition-property: transform
+		transition-property: transform, -webkit-transform
+		transition-duration: 0.15s
+		transition-timing-function: ease
+		+r(1023)
+			background-color: #3263a5
+		&::before, &::after
+			width: 23px
+			height: 2px
+			background-color: #3263a5
+			position: absolute
+			transition-property: -webkit-transform
+			transition-property: transform
+			transition-property: transform, -webkit-transform
+			transition-duration: 0.15s
+			transition-timing-function: ease
+			+r(1023)
+				background-color: #3263a5
+		&::before, &::after
+			content: ""
+			display: block
+		&::before
+			top: -7px
+		&::after
+			bottom: -7px
+	&.is-white &__inner
+		background-color: #3263a5
+	&.is-white &__inner:before,
+	&.is-white &__inner:after
+		background-color: #3263a5
+	&_spin &__inner
+		transition-duration: 0.3s
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		&::before
+			transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in
+		&::after
+			transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+			transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+			transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	&.is-active &__inner
+		-webkit-transform: rotate(225deg)
+		transform: rotate(225deg)
+		transition-delay: 0.14s
+		transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+		&::before
+			top: 0
+			opacity: 0
+			transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out
+		&::after
+			bottom: 0
+			-webkit-transform: rotate(-90deg)
+			transform: rotate(-90deg)
+			transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+			transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+			transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+		
 .teaser
 	height: 340px
 	background-color: #5d3b80
 	background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
 	+border
+	+r(1023)
+		margin-left: -100px
+	+r(479)
+		height: 240px
 	&__inner
 		position: relative
 		padding: 25px 40px
 		width: 100%
 		height: 100%
 		background: url(../img/bg/teaser.png) 95% 100% no-repeat
+		+r(767)
+			background-size: 50%
+		+r(479)
+			padding: 25px
 	&__title
 		+yeseva
 		font-size: 31px
 		color: #454545
 		line-height: 0.97
+		+r(767)
+			max-width: 50%
+		+r(479)
+			max-width: 70%
+			font-size: 26px
 	&__quote
 		position: absolute
 		top: 10px
 		right: 27%
 		+vertical
+		+r(767)
+			right: 16%
+		+r(479)
+			display: none
 		&-text
 			margin-top: -20px
 			display: inline-block
@@ -536,6 +761,9 @@ img
 	----------------------------------- */
 .tabs
 	font-size: 0
+	+r(1023)
+		display: table
+		width: 100%
 	&__item
 		user-select: none
 		display: inline-block
@@ -545,37 +773,81 @@ img
 		+border
 		cursor: pointer
 		+vertical
+		+r(1023)
+			display: table-cell
+			padding: 17px 5px 15px
+			vertical-align: middle
+			width: 25%
+			max-width: 25%
+			height: auto
+			&:before
+				display: none
+				content: none
 		&:hover,
 		&.is-active
 			background-image: none
 			border: none
+			+r(1023)
+				+border
+				background-color: #ffffff
 		&-text
 			margin-top: -1px
 			display: inline-block
 			vertical-align: middle
+			+r(1023)
+				display: block
+				width: 100%
+				height: 100%
+				background: none
+				font-size: 20px
+				color: #bbb
+				line-height: 1.15
+				text-align: center
+				text-shadow: 0 2px 2px rgba(71, 108, 2, 0.17)
+			+r(767)
+				font-size: 16px
 			& + &
 				display: none
 		&.is-active &-text
-				display: none
+			display: none
+			+r(1023)
+				display: block
+				color: #6bb61c
+			+r(767)
+				border: none
 		&.is-active &-text + &-text
 			position: relative
 			top: 13px
 			display: inline-block
+			+r(1023)
+				display: none
 		
 .tab
 	font-size: 0
 	&__item
 		font-size: 0
+		+pie-clearfix
 		& + &
 			display: none
 	&__content
 		display: inline-block
 		width: 25%
+		vertical-align: top
+		+r(1023)
+			width: 33.33%
+		&_advert
+			+r(1023)
+				float: left
 	&__multi
 		display: inline-block
 		width: 75%
+		+r(1023)
+			display: inline
+			width: auto
 	&__multi &__content
-		width: 33.333%
+		width: 33.33%
+		+r(1023)
+			width: 33.33%
 	
 .card
 	display: block
@@ -663,7 +935,94 @@ img
 	&__controls-item:hover &__icon-text
 		color: #fbaab1
 			
-			
+
+/* ===================================
+	 Search
+	 =================================== */
+.search
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	min-height: 100%
+	background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
+	+border
+	z-index: 100
+	+r(1023)
+		left: -100px
+	&__block
+		padding: 20px
+		height: 113px
+		background-image: radial-gradient(circle 509px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
+		+border
+	&__form
+		position: relative
+		border-top: none
+		border-left: none
+		border-right: none
+	&__input
+		display: block
+		padding-right: 25px
+		width: 100%
+		height: 100%
+		+candara-b
+		font-size: 18px
+		line-height: 2
+		color: #454545
+		background-color: transparent
+		+placeholder-color(#cdcdcd)
+	&__cancel
+		position: absolute
+		display: block
+		z-index: 1
+		top: 50%
+		right: 20px
+		margin-top: -8px
+		cursor: pointer
+	&__item
+		display: table
+		width: 100%
+		table-layout: fixed
+	&__image
+		display: table-cell
+		width: 72px
+		vertical-align: middle
+		&-in
+			overflow: hidden
+			display: block
+			height: 72px
+			border-radius: 5px
+	&__img
+		width: 100%
+	&__content
+		display: table-cell
+		padding-left: 20px
+		padding-right: 50px
+		line-height: 1.2
+		vertical-align: middle
+	&__title
+		+candara-b
+		font-size: 18px
+		color: #5d3b80
+		&-text
+			border-bottom: 1px solid #d5cddf
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+	&__topic
+		margin-top: 9px
+		font-size: 14px
+		color: #cdcdcd
+	&__text
+		margin-top: 7px
+		font-size: 14px
+		color: #454545
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+
 
 /* ===================================
 	 Other Styles

@@ -15,7 +15,7 @@ block content
 				//end logo
 
 				//begin login
-				.login
+				.login.js-login
 					form.login__form.form(action='#')
 						.form__field
 							input.form__input(type='text' placeholder='Введите ваш логин' data-validation="required")
@@ -50,8 +50,34 @@ block content
 
 			//begin aside
 			aside.aside
+				//begin search
+				.search.js-search
+					form.search__form.search__block(action='#')
+						input.search__input(type='text' placeholder='Введите слово для поиска')
+						button.search__cancel.icon-cancel.js-form-clear(type='button')
+					.search__results
+						.search__item.search__block
+							.search__image
+								a.search__image-in(href='#')
+									img.search__img(src='img/content/search-result.jpg' alt='image')
+							.search__content
+								.search__title
+									a.search__title-text(href='#') Результат поиска
+								.search__topic Название раздела
+								.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
+						.search__item.search__block
+							.search__image
+								a.search__image-in(href='#')
+									img.search__img(src='img/content/search-result.jpg' alt='image')
+							.search__content
+								.search__title
+									a.search__title-text(href='#') Другой результат поиска
+								.search__topic Название раздела
+								.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
+				//end search
+
 				//begin header
-				nav.nav
+				nav.nav.js-nav
 					a.nav__link.nav__link_forum(href='#')
 						.nav__link-icon.icon-forum
 						.nav__link-text Форум
@@ -67,16 +93,23 @@ block content
 					a.nav__link.nav__link_subscribe(href='#')
 						.nav__link-icon.icon-subscribe
 						.nav__link-text Подписаться
-					a.nav__link.nav__link_search(href='#')
+					a.nav__link.nav__link_search.js-toggle-search(href='#')
 						.nav__link-icon.icon-search
 						.nav__link-text Поиск
 				//end header
+
+				.aside__hamburger
+					//begin hamburger
+					.hamburger.hamburger_spin.js-hamburger.is-white
+						.hamburger__box
+							.hamburger__inner
+					//end hamburger
 
 				//begin navigation
 				.navigation.js-navigation
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-1
+							.navigation__link-text.icon-navigation-1 Подготовка
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-1
@@ -110,7 +143,7 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-2
+							.navigation__link-text.icon-navigation-2 Беременность
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-2
@@ -144,7 +177,7 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-3
+							.navigation__link-text.icon-navigation-3 Роды
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-3
@@ -178,7 +211,7 @@ block content
 											.navigate__preview-text Двойняшки, что с ними делать?
 					.navigation__item
 						a.navigation__link(href='#')
-							.navigation__link-text.icon-navigation-4
+							.navigation__link-text.icon-navigation-4 Ребенок
 						.navigation__navigate.navigate.js-navigate
 							.navigate__inner
 								.navigate__subicon.icon-navigation-icon-4
@@ -225,16 +258,16 @@ block content
 			//begin tabs
 			.tabs.js-tabs-nav
 				.tabs__item.is-active
-					.tabs__item-text.icon-tabs-1
+					.tabs__item-text.icon-tabs-1 Новые статьи
 					.tabs__item-text.icon-tabs-1-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-2
+					.tabs__item-text.icon-tabs-2 Самое интересное
 					.tabs__item-text.icon-tabs-2-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-3
+					.tabs__item-text.icon-tabs-3 Новые темы
 					.tabs__item-text.icon-tabs-3-hover
 				.tabs__item
-					.tabs__item-text.icon-tabs-4
+					.tabs__item-text.icon-tabs-4 Новое в блогах
 					.tabs__item-text.icon-tabs-4-hover
 			//end tabs
 
@@ -432,7 +465,7 @@ block content
 											.card__icon.icon-card-heart-hover
 											.card__icon-text 26
 							//end card
-					.tab__content
+					.tab__content.tab__content_advert
 						.card.card_multi
 							a(href='#')
 								img.card__multi(src='img/content/advert-1.png' alt='image')
@@ -512,7 +545,7 @@ block content
 										.card__icon.icon-card-heart-hover
 										.card__icon-text 26
 						//end card
-					.tab__content
+					.tab__content.tab__content_advert
 						.card.card_multi
 							a(href='#')
 								img.card__multi(src='img/content/advert-2.png' alt='image')
@@ -824,7 +857,7 @@ block content
 											.card__icon.icon-card-heart-hover
 											.card__icon-text 26
 							//end card
-					.tab__content
+					.tab__content.tab__content_advert
 						.card.card_multi
 							a(href='#')
 								img.card__multi(src='img/content/advert-1.png' alt='image')

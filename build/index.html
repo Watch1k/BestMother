@@ -27,7 +27,7 @@
         </div>
         <!--end logo-->
         <!--begin login-->
-        <div class="login">
+        <div class="login js-login">
           <form class="login__form form" action="#">
             <div class="form__field">
               <input class="form__input" type="text" placeholder="Введите ваш логин" data-validation="required">
@@ -73,8 +73,38 @@
       <!--end aside-->
       <!--begin aside-->
       <aside class="aside">
+        <!--begin search-->
+        <div class="search js-search">
+          <form class="search__form search__block" action="#">
+            <input class="search__input" type="text" placeholder="Введите слово для поиска">
+            <button class="search__cancel icon-cancel js-form-clear" type="button"></button>
+          </form>
+          <div class="search__results">
+            <div class="search__item search__block">
+              <div class="search__image">
+                <a class="search__image-in" href="#"><img class="search__img" src="img/content/search-result.jpg" alt="image"></a>
+              </div>
+              <div class="search__content">
+                <div class="search__title"><a class="search__title-text" href="#">Результат поиска</a></div>
+                <div class="search__topic">Название раздела</div>
+                <div class="search__text">Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.</div>
+              </div>
+            </div>
+            <div class="search__item search__block">
+              <div class="search__image">
+                <a class="search__image-in" href="#"><img class="search__img" src="img/content/search-result.jpg" alt="image"></a>
+              </div>
+              <div class="search__content">
+                <div class="search__title"><a class="search__title-text" href="#">Другой результат поиска</a></div>
+                <div class="search__topic">Название раздела</div>
+                <div class="search__text">Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end search-->
         <!--begin header-->
-        <nav class="nav">
+        <nav class="nav js-nav">
           <a class="nav__link nav__link_forum" href="#">
             <div class="nav__link-icon icon-forum"></div>
             <div class="nav__link-text">Форум</div>
@@ -95,17 +125,26 @@
             <div class="nav__link-icon icon-subscribe"></div>
             <div class="nav__link-text">Подписаться</div>
           </a>
-          <a class="nav__link nav__link_search" href="#">
+          <a class="nav__link nav__link_search js-toggle-search" href="#">
             <div class="nav__link-icon icon-search"></div>
             <div class="nav__link-text">Поиск</div>
           </a>
         </nav>
         <!--end header-->
+        <div class="aside__hamburger">
+          <!--begin hamburger-->
+          <div class="hamburger hamburger_spin js-hamburger is-white">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+          <!--end hamburger-->
+        </div>
         <!--begin navigation-->
         <div class="navigation js-navigation">
           <div class="navigation__item">
             <a class="navigation__link" href="#">
-              <div class="navigation__link-text icon-navigation-1"></div>
+              <div class="navigation__link-text icon-navigation-1">Подготовка</div>
             </a>
             <div class="navigation__navigate navigate js-navigate">
               <div class="navigate__inner">
@@ -151,7 +190,7 @@
           </div>
           <div class="navigation__item">
             <a class="navigation__link" href="#">
-              <div class="navigation__link-text icon-navigation-2"></div>
+              <div class="navigation__link-text icon-navigation-2">Беременность</div>
             </a>
             <div class="navigation__navigate navigate js-navigate">
               <div class="navigate__inner">
@@ -197,7 +236,7 @@
           </div>
           <div class="navigation__item">
             <a class="navigation__link" href="#">
-              <div class="navigation__link-text icon-navigation-3"></div>
+              <div class="navigation__link-text icon-navigation-3">Роды</div>
             </a>
             <div class="navigation__navigate navigate js-navigate">
               <div class="navigate__inner">
@@ -243,7 +282,7 @@
           </div>
           <div class="navigation__item">
             <a class="navigation__link" href="#">
-              <div class="navigation__link-text icon-navigation-4"></div>
+              <div class="navigation__link-text icon-navigation-4">Ребенок</div>
             </a>
             <div class="navigation__navigate navigate js-navigate">
               <div class="navigate__inner">
@@ -306,19 +345,19 @@
       <!--begin tabs-->
       <div class="tabs js-tabs-nav">
         <div class="tabs__item is-active">
-          <div class="tabs__item-text icon-tabs-1"></div>
+          <div class="tabs__item-text icon-tabs-1">Новые статьи</div>
           <div class="tabs__item-text icon-tabs-1-hover"></div>
         </div>
         <div class="tabs__item">
-          <div class="tabs__item-text icon-tabs-2"></div>
+          <div class="tabs__item-text icon-tabs-2">Самое интересное</div>
           <div class="tabs__item-text icon-tabs-2-hover"></div>
         </div>
         <div class="tabs__item">
-          <div class="tabs__item-text icon-tabs-3"></div>
+          <div class="tabs__item-text icon-tabs-3">Новые темы</div>
           <div class="tabs__item-text icon-tabs-3-hover"></div>
         </div>
         <div class="tabs__item">
-          <div class="tabs__item-text icon-tabs-4"></div>
+          <div class="tabs__item-text icon-tabs-4">Новое в блогах</div>
           <div class="tabs__item-text icon-tabs-4-hover"></div>
         </div>
       </div>
@@ -578,7 +617,7 @@
               <!--end card-->
             </div>
           </div>
-          <div class="tab__content">
+          <div class="tab__content tab__content_advert">
             <div class="card card_multi">
               <a href="#"><img class="card__multi" src="img/content/advert-1.png" alt="image"></a>
             </div>
@@ -683,7 +722,7 @@
             </a>
             <!--end card-->
           </div>
-          <div class="tab__content">
+          <div class="tab__content tab__content_advert">
             <div class="card card_multi">
               <a href="#"><img class="card__multi" src="img/content/advert-2.png" alt="image"></a>
             </div>
@@ -1094,7 +1133,7 @@
               <!--end card-->
             </div>
           </div>
-          <div class="tab__content">
+          <div class="tab__content tab__content_advert">
             <div class="card card_multi">
               <a href="#"><img class="card__multi" src="img/content/advert-1.png" alt="image"></a>
             </div>
