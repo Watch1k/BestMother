@@ -1905,6 +1905,12 @@ img {
     @media only screen and (max-width: 1023px) {
       .tab__content {
         width: 33.33%; } }
+    @media only screen and (max-width: 639px) {
+      .tab__content {
+        width: 50%; } }
+    @media only screen and (max-width: 479px) {
+      .tab__content {
+        width: 100%; } }
     @media only screen and (max-width: 1023px) {
       .tab__content_advert {
         float: left; } }
@@ -1917,9 +1923,12 @@ img {
         width: auto; } }
   .tab__multi .tab__content {
     width: 33.33%; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 639px) {
       .tab__multi .tab__content {
-        width: 33.33%; } }
+        width: 50%; } }
+    @media only screen and (max-width: 479px) {
+      .tab__multi .tab__content {
+        width: 100%; } }
 
 .card {
   display: block;
@@ -1938,6 +1947,16 @@ img {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   transform: translateZ(0); }
+  @media only screen and (max-width: 479px) {
+    .card {
+      margin: 10px auto;
+      width: 100%;
+      height: auto;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0; }
+      .card:first-child {
+        margin-top: 0; } }
   .card_multi {
     padding-top: 53px;
     text-align: center;
@@ -1953,6 +1972,9 @@ img {
   .card__image {
     overflow: hidden;
     height: 119px; }
+    @media only screen and (max-width: 479px) {
+      .card__image {
+        height: auto; } }
   .card__img {
     width: 100%; }
   .card__content {

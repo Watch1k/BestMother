@@ -1,6 +1,12 @@
 /* Common JS */
 $(document).ready(function(){
 
+	$(window).on('resize', function () {
+		showNav();
+		showLogin();
+		toggleNavBtn();
+	});
+
 	// Clear placeholder
 	(function() {
 		var el = $('input, textarea');
@@ -104,4 +110,30 @@ $(document).ready(function(){
 			login.fadeToggle();
 		});
 	})();
+
+	function showNav() {
+		var nav = $('.js-nav');
+
+		if ($(window).width() >= 1024) {
+			nav.css('display', 'flex');
+		} else {
+			nav.css('display', 'none');
+		}
+	}
+
+	function showLogin() {
+		var login = $('.js-login');
+
+		if ($(window).width() >= 1024) {
+			login.css('display', 'block');
+		} else {
+			login.css('display', 'none');
+		}
+	}
+
+	function toggleNavBtn() {
+		var navBtn = $('.js-hamburger');
+
+		navBtn.removeClass('is-active');
+	}
 });

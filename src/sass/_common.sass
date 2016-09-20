@@ -835,6 +835,10 @@ img
 		vertical-align: top
 		+r(1023)
 			width: 33.33%
+		+r(639)
+			width: 50%
+		+r(479)
+			width: 100%
 		&_advert
 			+r(1023)
 				float: left
@@ -846,8 +850,10 @@ img
 			width: auto
 	&__multi &__content
 		width: 33.33%
-		+r(1023)
-			width: 33.33%
+		+r(639)
+			width: 50%
+		+r(479)
+			width: 100%
 	
 .card
 	display: block
@@ -860,6 +866,13 @@ img
 	border-radius: 10px
 	box-shadow: 0 9px 13px rgba(146, 158, 169, 0.4)
 	transform: translateZ(0)
+	+r(479)
+		margin: 10px auto
+		width: 100%
+		height: auto
+		border-radius: 0
+		&:first-child
+			margin-top: 0
 	&_multi
 		padding-top: 53px
 		text-align: center
@@ -871,6 +884,8 @@ img
 	&__image
 		overflow: hidden
 		height: 119px
+		+r(479)
+			height: auto
 	&__img
 		width: 100%
 	&__content
