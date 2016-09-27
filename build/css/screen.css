@@ -599,11 +599,7 @@ body {
   font-size: 14px;
   color: #3b3b3b;
   line-height: 1.14;
-  background-color: #129787;
-  background-image: -webkit-radial-gradient(circle 1263px at 519% 516%, #7ad2c6 0%, #50baac 40%, #37a89a 60%, #078677 99%, #078677 100%);
-  background-image: -moz-radial-gradient(circle 1263px at 519% 516%, #7ad2c6 0%, #50baac 40%, #37a89a 60%, #078677 99%, #078677 100%);
-  background-image: -o-radial-gradient(circle 1263px at 519% 516%, #7ad2c6 0%, #50baac 40%, #37a89a 60%, #078677 99%, #078677 100%);
-  background-image: radial-gradient(circle 1263px at 519% 516%, #7ad2c6 0%, #50baac 40%, #37a89a 60%, #078677 99%, #078677 100%); }
+  background: #fff url("../img/bg.png") 0 0 repeat; }
 
 .wrapper {
   position: relative;
@@ -856,7 +852,9 @@ img {
   @media only screen and (max-width: 767px) {
     .logo {
       position: relative;
-      width: 160px;
+      width: -webkit-calc(100vw - 46px);
+      width: -moz-calc(100vw - 46px);
+      width: calc(100vw - 46px);
       z-index: 1; } }
   .logo__link {
     position: relative;
@@ -869,6 +867,9 @@ img {
         margin-top: 0;
         height: 100%;
         padding: 10px; } }
+    @media only screen and (max-width: 767px) {
+      .logo__link {
+        padding: 0 10px; } }
   @media only screen and (max-width: 1023px) {
     .logo__img {
       height: 100%; } }
@@ -922,7 +923,9 @@ img {
       top: 130px;
       left: 0;
       width: 100vw;
-      z-index: 3; } }
+      z-index: 3; }
+      .login ~ .block {
+        display: none; } }
   @media only screen and (max-width: 767px) {
     .login {
       top: 362px; } }
@@ -1259,12 +1262,6 @@ img {
         background-image: -moz-radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%);
         background-image: -o-radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%);
         background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%); } }
-    .nav__link_heart {
-      position: relative;
-      top: -42px; }
-      @media only screen and (max-width: 1023px) {
-        .nav__link_heart {
-          top: 0; } }
     .nav__link-icon {
       position: relative;
       display: inline-block;
@@ -1277,6 +1274,8 @@ img {
       -o-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
+      .nav__link-icon.icon-heart {
+        top: 5px !important; }
       @media only screen and (max-width: 1023px) {
         .nav__link-icon {
           display: none; } }
@@ -1284,16 +1283,14 @@ img {
       position: relative;
       top: 14px; }
     .nav__link-text {
-      font-size: 14px;
-      color: #4c8313;
-      line-height: 1; }
+      font-size: 13px;
+      color: #333;
+      line-height: 1;
+      white-space: nowrap; }
       @media only screen and (max-width: 1023px) {
         .nav__link-text {
           font-size: 18px;
           line-height: 1.4; } }
-      @media only screen and (max-width: 1023px) {
-        .nav__link-text br {
-          display: none; } }
     .nav__link:hover .nav__link-icon {
       -webkit-animation: anim-nav-hover 1s forwards ease-in-out;
       -moz-animation: anim-nav-hover 1s forwards ease-in-out;
@@ -1961,11 +1958,9 @@ img {
 
 /* Cards
 	----------------------------------- */
-.main {
-  margin-left: 260px; }
-  @media only screen and (max-width: 1024px) {
-    .main {
-      margin-left: 0; } }
+@media only screen and (max-width: 1023px) {
+  .main {
+    margin-left: -100px; } }
 
 .cards {
   font-size: 0; }
@@ -2047,21 +2042,6 @@ img {
           padding-left: 22px;
           padding-right: 20px;
           padding-bottom: 10px; }
-  .cards__multi {
-    display: inline-block;
-    width: 75%; }
-    @media only screen and (max-width: 1023px) {
-      .cards__multi {
-        display: inline;
-        width: auto; } }
-  .cards__multi .cards__content {
-    width: 33.33%; }
-    @media only screen and (max-width: 639px) {
-      .cards__multi .cards__content {
-        width: 50%; } }
-    @media only screen and (max-width: 479px) {
-      .cards__multi .cards__content {
-        width: 100%; } }
 
 .card {
   display: block;

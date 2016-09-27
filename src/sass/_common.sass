@@ -48,8 +48,7 @@ body
 	font-size: 14px
 	color: #3b3b3b
 	line-height: 1.14
-	background-color: #129787
-	background-image: radial-gradient(circle 1263px at 519% 516%, #7ad2c6 0%, #50baac 40%, #37a89a 60%, #078677 99%, #078677 100%)
+	background: #fff url('../img/bg.png') 0 0 repeat
 
 .wrapper
 	position: relative
@@ -248,7 +247,7 @@ img
 			content: none
 	+r(767)
 		position: relative
-		width: 160px
+		width: calc(100vw - 46px)
 		z-index: 1
 	&__link
 		position: relative
@@ -260,6 +259,8 @@ img
 			margin-top: 0
 			height: 100%
 			padding: 10px
+		+r(767)
+			padding: 0 10px
 	&__img
 		+r(1023)
 			height: 100%
@@ -297,6 +298,8 @@ img
 		left: 0
 		width: 100vw
 		z-index: 3
+		~ .block
+			display: none
 	+r(767)
 		top: 362px
 	&_active
@@ -531,32 +534,27 @@ img
 			+border
 			background-color: #5d3b80
 			background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
-		&_heart
-			position: relative
-			top: -42px
-			+r(1023)
-				top: 0
 		&-icon
 			position: relative
 			display: inline-block
 			vertical-align: bottom
 			animation: anim-nav 0.5s forwards ease-in-out
 			transition: all 0.3s
+			&.icon-heart
+				top: 5px!important
 			+r(1023)
 				display: none
 		&_heart &-icon
 			position: relative
 			top: 14px
 		&-text
-			font-size: 14px
-			color: #4c8313
+			font-size: 13px
+			color: #333
 			line-height: 1
+			white-space: nowrap
 			+r(1023)
 				font-size: 18px
 				line-height: 1.4
-			br
-				+r(1023)
-					display: none
 		&:hover &-icon
 			animation: anim-nav-hover 1s forwards ease-in-out
 			transition: all 1s
@@ -944,9 +942,8 @@ img
 /* Cards
 	----------------------------------- */
 .main
-	margin-left: 260px
-	+r(1024)
-		margin-left: 0
+	+r(1023)
+		margin-left: -100px
 	
 .cards
 	font-size: 0
@@ -1015,18 +1012,6 @@ img
 					padding-left: 22px
 					padding-right: 20px
 					padding-bottom: 10px
-	&__multi
-		display: inline-block
-		width: 75%
-		+r(1023)
-			display: inline
-			width: auto
-	&__multi &__content
-		width: 33.33%
-		+r(639)
-			width: 50%
-		+r(479)
-			width: 100%
 	
 .card
 	display: block
