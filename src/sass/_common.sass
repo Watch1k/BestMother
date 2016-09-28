@@ -972,13 +972,20 @@ img
 				width: 310px
 				height: 360px
 				+r(479)
+					height: auto
 					width: 100%
 				&__image
 					height: 180px
+				&__text
+					+r(479)
+						display: block
+				&__controls
+					+r(479)
+						display: block
 				&__content
 					position: relative
 					padding: 10px 20px
-					height: 151px
+					height: auto
 					overflow: hidden
 					&:before
 						content: ''
