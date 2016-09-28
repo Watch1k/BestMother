@@ -1991,6 +1991,12 @@ img {
       @media only screen and (max-width: 639px) {
         .cards__content_lg {
           width: 100%; } }
+      .cards__content_lg .card:hover .card__content {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0); }
       .cards__content_lg .card {
         width: 310px;
         height: 360px; }
@@ -2088,8 +2094,34 @@ img {
   .card__img {
     width: 100%; }
   .card__content {
+    height: 195px;
     padding: 5px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+    @media only screen and (max-width: 479px) {
+      .card__content {
+        height: auto; } }
+  .card:hover .card__content {
+    -webkit-transform: translateY(-119px);
+    -moz-transform: translateY(-119px);
+    -ms-transform: translateY(-119px);
+    -o-transform: translateY(-119px);
+    transform: translateY(-119px); }
+    @media only screen and (max-width: 1024px) {
+      .card:hover .card__content {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0); } }
   .card__title {
     overflow: hidden;
     display: block;
@@ -2118,11 +2150,14 @@ img {
     display: block;
     display: -webkit-box;
     height: 80px;
-    margin-top: 15px;
+    margin-top: 10px;
     line-height: 16px;
     padding: 0 2px;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical; }
+    @media only screen and (max-width: 479px) {
+      .card__text {
+        display: none; } }
   .card__controls {
     margin-top: 10px;
     padding: 0 2px; }
@@ -2131,6 +2166,9 @@ img {
       display: table; }
     .card__controls:after {
       clear: both; }
+    @media only screen and (max-width: 479px) {
+      .card__controls {
+        display: none; } }
     .card__controls-item {
       float: left;
       font-size: 0;

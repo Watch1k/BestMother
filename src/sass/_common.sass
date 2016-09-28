@@ -966,6 +966,8 @@ img
 			width: 50%
 			+r(639)
 				width: 100%
+			.card:hover .card__content
+				transform: translateY(0)
 			.card
 				width: 310px
 				height: 360px
@@ -1043,8 +1045,17 @@ img
 	&__img
 		width: 100%
 	&__content
+		height: 195px
 		padding: 5px
 		background-color: #ffffff
+		transform: translateY(0)
+		transition: all 0.5s
+		+r(479)
+			height: auto
+	&:hover &__content
+		transform: translateY(-119px)
+		+r(1024)
+			transform: translateY(0)
 	&__title
 		overflow: hidden
 		display: block
@@ -1072,15 +1083,19 @@ img
 		display: block
 		display: -webkit-box
 		height: 80px
-		margin-top: 15px
+		margin-top: 10px
 		line-height: 16px
 		padding: 0 2px
 		-webkit-line-clamp: 5
 		-webkit-box-orient: vertical
+		+r(479)
+			display: none
 	&__controls
 		margin-top: 10px
 		padding: 0 2px
 		+pie-clearfix
+		+r(479)
+			display: none
 		&-item
 			float: left
 			font-size: 0
