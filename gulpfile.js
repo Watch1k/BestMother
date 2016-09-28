@@ -84,7 +84,7 @@ gulp.task('sass', function() {
             .pipe(postcss(processors))
             .pipe(rigger())
             .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('build')),
+            .pipe(gulp.dest('build/css')),
         gulp.src(src.root + '/css/*.css')
     )
         .pipe(concat('screen.css'))
