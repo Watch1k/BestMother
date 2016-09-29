@@ -1,5 +1,5 @@
 /* Common JS */
-$(document).ready(function(){
+$(document).ready(function () {
 
 	$(window).on('resize', function () {
 		showNav();
@@ -8,14 +8,14 @@ $(document).ready(function(){
 	});
 
 	// Clear placeholder
-	(function() {
+	(function () {
 		var el = $('input, textarea');
-		el.focus(function(){
-			$(this).data('placeholder',$(this).attr('placeholder'));
-			$(this).attr('placeholder','');
+		el.focus(function () {
+			$(this).data('placeholder', $(this).attr('placeholder'));
+			$(this).attr('placeholder', '');
 		});
-		el.blur(function(){
-			$(this).attr('placeholder',$(this).data('placeholder'));
+		el.blur(function () {
+			$(this).attr('placeholder', $(this).data('placeholder'));
 		});
 	}());
 
@@ -35,47 +35,29 @@ $(document).ready(function(){
 	})();
 
 	(function () {
-			var navigation = $('.js-navigation'),
-				navigationItem = navigation.children(),
-				navigate = $('.js-navigate');
+		var navigation = $('.js-navigation'),
+			navigationItem = navigation.children(),
+			navigate = $('.js-navigate');
 
-		if ($(window).width() > 1024) {
-			var timer;
-			navigationItem.on({
-				'mouseenter': function () {
-					var _this = $(this);
-					timer = setTimeout(function () {
-						_this.find(navigate).fadeIn().css('z-index', '3');
-					}, 350);
-				},
-				'mouseleave': function () {
-					var _this = $(this);
-					clearTimeout(timer);
-					_this.find(navigate).fadeOut().css('z-index', '2');
-				}
-			});
-		}
-
-		$(window).on('resize', function () {
-			if ($(window).width() <= 1024) {
-				navigationItem.unbind();
-				navigate.hide();
-			} else {
-				var timer;
-				navigationItem.on({
-					'mouseenter': function () {
-						var _this = $(this);
-						timer = setTimeout(function () {
-							_this.find(navigate).fadeIn().css('z-index', '3');
-						}, 350);
-					},
-					'mouseleave': function () {
-						var _this = $(this);
-						clearTimeout(timer);
-						_this.find(navigate).fadeOut().css('z-index', '2');
-					}
-				});
+		var timer;
+		navigationItem.on({
+			'mouseenter': function () {
+				var _this = $(this);
+				timer = setTimeout(function () {
+					_this.find(navigate).fadeIn().css('z-index', '3');
+				}, 350);
+			},
+			'mouseleave': function () {
+				var _this = $(this);
+				clearTimeout(timer);
+				_this.find(navigate).fadeOut().css('z-index', '2');
 			}
+		});
+
+		navigationItem.children('a').on('touchstart', function (e) {
+			$(this).parent().siblings().trigger('mouseleave');
+			$(this).parent().trigger('mouseenter');
+			e.preventDefault();
 		});
 	})();
 
