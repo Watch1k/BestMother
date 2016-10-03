@@ -301,7 +301,7 @@ img
 		~ .block
 			display: none
 	+r(767)
-		top: 362px
+		top: 315px
 	&_active
 		height: auto
 		padding: 25px 10px 25px 25px
@@ -539,6 +539,8 @@ img
 			+border
 			background-color: #5d3b80
 			background-image: radial-gradient(circle 170px at 22.12% 27.43%, white 0%, #f4f5f7 100%)
+			&:last-child
+				display: none
 		&-icon
 			position: relative
 			display: inline-block
@@ -553,11 +555,20 @@ img
 			position: relative
 			top: 14px
 		&-text
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -15px
 			font-size: 13px
 			color: #333
 			line-height: 1
 			white-space: nowrap
+			-webkit-font-smoothing: antialiased
 			+r(1023)
+				position: relative
+				left: auto
+				right: auto
+				bottom: auto
 				font-size: 18px
 				line-height: 1.4
 		&:hover &-icon
@@ -1175,6 +1186,32 @@ img
 /* ===================================
 	 Search
 	 =================================== */
+.searching
+	display: none
+	position: relative
+	margin-left: -100px
+	padding: 10px 50px
+	+pie-clearfix
+	+r(767)
+		display: block
+	&__input
+		display: block
+		padding: 0 55px 0 10px
+		width: 100%
+		+candara-b
+		font-size: 18px
+		line-height: 2
+		color: #454545
+		background-color: #fff
+		+placeholder-color(#cdcdcd)
+	&__submit
+		position: absolute
+		height: 36px
+		width: 48px
+		right: 48px
+		top: 50%
+		margin-top: -18px
+
 .search
 	display: none
 	position: absolute

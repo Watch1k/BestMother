@@ -60,32 +60,6 @@ block content
 			//begin aside
 			.aside
 				aside
-					//begin search
-					.search.js-search
-						form.search__form.search__block(action='#')
-							input.search__input(type='text' placeholder='Введите слово для поиска')
-							button.search__cancel.icon-cancel.js-form-clear(type='button')
-						.search__results
-							.search__item.search__block
-								.search__image
-									a.search__image-in(href='#')
-										img.search__img(src='img/content/search-result.jpg' alt='image')
-								.search__content
-									.search__title
-										a.search__title-text(href='#') Результат поиска
-									.search__topic Название раздела
-									.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
-							.search__item.search__block
-								.search__image
-									a.search__image-in(href='#')
-										img.search__img(src='img/content/search-result.jpg' alt='image')
-								.search__content
-									.search__title
-										a.search__title-text(href='#') Другой результат поиска
-									.search__topic Название раздела
-									.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
-					//end search
-
 					//begin header
 					nav.nav.js-nav
 						a.nav__link.nav__link_forum(href='#')
@@ -114,6 +88,39 @@ block content
 							.hamburger__box
 								.hamburger__inner
 						//end hamburger
+
+					//begin search
+					.search.js-search
+						form.search__form.search__block(action='#')
+							input.search__input(type='text' placeholder='Введите слово для поиска')
+							button.search__cancel.icon-cancel.js-form-clear(type='button')
+						.search__results.js-search-results
+							.search__item.search__block
+								.search__image
+									a.search__image-in(href='#')
+										img.search__img(src='img/content/search-result.jpg' alt='image')
+								.search__content
+									.search__title
+										a.search__title-text(href='#') Результат поиска
+									.search__topic Название раздела
+									.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
+							.search__item.search__block
+								.search__image
+									a.search__image-in(href='#')
+										img.search__img(src='img/content/search-result.jpg' alt='image')
+								.search__content
+									.search__title
+										a.search__title-text(href='#') Другой результат поиска
+									.search__topic Название раздела
+									.search__text Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке. Дуров, верни сеть: Как основатели «ВКонтакте» потеряли контроль» в потоке.
+					//end search
+
+					//begin mobile-search
+					form.searching(action='#')
+						input.searching__input(type='text' placeholder='Введите слово для поиска')
+						button.searching__submit(type='submit')
+							.icon.icon-searching
+					//end mobile-search
 
 					//begin navigation
 					.navigation.js-navigation
