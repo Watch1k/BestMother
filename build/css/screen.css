@@ -2277,7 +2277,7 @@ img {
   display: none;
   position: relative;
   margin-left: -100px;
-  padding: 10px 50px; }
+  padding: 10px; }
   .searching:before, .searching:after {
     content: "";
     display: table; }
@@ -2286,6 +2286,9 @@ img {
   @media only screen and (max-width: 767px) {
     .searching {
       display: block; } }
+  @media only screen and (max-width: 479px) {
+    .searching {
+      padding: 10px 5px; } }
   .searching__input {
     display: block;
     padding: 0 55px 0 10px;
