@@ -1,10 +1,16 @@
 /* Common JS */
 $(document).ready(function () {
 
+	var windowWidth = $(window).width();
+
 	$(window).on('resize', function () {
-		showNav();
-		showLogin();
-		toggleNavBtn();
+		if ($(window).width() != windowWidth) {
+			showNav();
+			showLogin();
+		 	toggleNavBtn();
+
+			windowWidth = $(window).width();
+		}
 	});
 
 	// Clear placeholder
