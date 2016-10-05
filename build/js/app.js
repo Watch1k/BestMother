@@ -21,10 +21,16 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 /* Common JS */
 $(document).ready(function () {
 
+	var windowWidth = $(window).width();
+
 	$(window).on('resize', function () {
-		showNav();
-		showLogin();
-		toggleNavBtn();
+		if ($(window).width() != windowWidth) {
+			showNav();
+			showLogin();
+			toggleNavBtn();
+
+			windowWidth = $(window).width();
+		}
 	});
 
 	// Clear placeholder
