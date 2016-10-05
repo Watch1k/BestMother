@@ -55,9 +55,14 @@ $(document).ready(function () {
 		});
 
 		navigationItem.children('a').on('touchstart', function (e) {
-			$(this).parent().siblings().trigger('mouseleave');
-			$(this).parent().trigger('mouseenter');
-			e.preventDefault();
+			if (!$(this).parent().hasClass('is-mobile')) {
+				$(this).parent().siblings().trigger('mouseleave').removeClass('is-mobile');
+				$(this).parent().trigger('mouseenter').addClass('is-mobile');
+				e.preventDefault();
+			} else {
+				$(this).parent().trigger('mouseleave').removeClass('is-mobile');
+				e.preventDefault();
+			}
 		});
 	})();
 
